@@ -3,7 +3,7 @@ html, body, .container {
 }
 
 body {
-  background: green;
+  background: #B0C4B9;
   color: white;
   }
 
@@ -11,14 +11,14 @@ body {
     position: relative;
   }
 
-.container, .title, .martini, .recipe {
-  border: 1px red solid;
+.container, .title, .up, .highball {
+  border: 1px #DD772C solid;
 }
 
-.title, .martini, .recipe {
+.title, .up, .highball {
   width: 90%;
   position: absolute;
-  
+
   left: 5%;
   right: 5%;
   text-align: center;
@@ -27,21 +27,41 @@ body {
 
 }
 
+.first-choice{
+  display: none;
+}
+.second-choice{
+  display: none;
+}
+
+.third-choice{
+  display: none;
+}
+.fourth-choice{
+  display: none;
+}
+.taco{
+  text-align: center;
+  font-size: 60px;
+}
 .title {
-  top: 2%;
+  top: 5%;
   min-height: 15%;
 }
 
-.martini {
+.up {
   top: 25%;
   min-height: 30%;
 }
 
-.recipe {
+.highball {
   top: 60%;
   min-height: 30%;
 }
 
 a {
   text-decoration: none;
+}
+li{
+    list-style: none;
 }
