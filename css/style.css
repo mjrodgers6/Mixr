@@ -1,31 +1,22 @@
-html, body, .container {
-  height: 98%;
-}
-
 body {
   background: #B0C4B9;
   color: white;
   }
 
-  .container {
-    position: relative;
-  }
 
-.container, .title, .up, .highball {
+.col-centered {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+
+.title, .up, .first-choice, .second-choice, .third-choice, .fourth-choice {
   border: 1px #DD772C solid;
 }
 
-.title, .up, .highball {
-  width: 90%;
-  position: absolute;
-
-  left: 5%;
-  right: 5%;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 30px;
-
-}
 
 .first-choice{
   display: none;
@@ -44,24 +35,9 @@ body {
   text-align: center;
   font-size: 60px;
 }
-.title {
-  top: 5%;
-  min-height: 15%;
-}
 
-.up {
-  top: 25%;
-  min-height: 30%;
-}
 
-.highball {
-  top: 60%;
-  min-height: 30%;
-}
 
 a {
   text-decoration: none;
-}
-li{
-    list-style: none;
 }
