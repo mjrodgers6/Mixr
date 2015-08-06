@@ -1,0 +1,11 @@
+background {
+  background-color: white;
+  color: black;
+}
+
+p {
+  font-family: Alegreya Sans SC;
+  font-weight: 300;
+  margin: 50px;
+  font-size: 50px;
+}
