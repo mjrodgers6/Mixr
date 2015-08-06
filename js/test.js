@@ -32,7 +32,7 @@ q1 = { "choices":
 function renderQuestion(question){
     options = _(question["choices"]).map(function(choice){
       var option = choice["answer"];
-      return "<li class='" + option + "'>" + option + "</li>";
+      return "<div class='" + option + "'>" + option + "</div>";
     });
     $('#question').html(options.join(''));
 }
@@ -68,8 +68,8 @@ function activate(question) {
             key = userChoices.join();
            console.log(finaldrink[key]);
            $(".title").fadeOut();
-           $(".up").fadeOut();
-           $(finaldrink[key]).show();
+           $("#question").fadeOut();
+           $(finaldrink[key]).fadeIn();
             
         //otherwise, show & set up the next Question
         }else{
