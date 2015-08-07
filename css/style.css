@@ -1,8 +1,21 @@
 body {
-  background: #27252C;
+  background-image: url(http://waynecarrickband.co.uk/wp-content/uploads/2014/11/dark-wall.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
   color: white;
   }
 
+.bg {
+ position: absolute;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+ background-color: rgba( 0, 0, 0, 0.7 );
+}
 
 .col-centered {
     float: none;
@@ -28,6 +41,8 @@ body {
   text-align: center;
   font-size: 60px;
   line-height: 1;
+  color:#14a5ff;
+  text-shadow: 0 0 1px #22cef9, 0 0 2px #22cef9, 0 0 6px #22cef9, 0 0 12px #22cef9;
 }
 
 .blurb{
@@ -53,8 +68,21 @@ a:hover {
 
 
 h1 {
-  font-family: Cinzel Decorative;
+  font-family: League Script;
   font-size: 100px;
+  
+}
+
+.pick {
+  font-size: 60px;
+  text-transform: uppercase;
+  background-color: black;
+  margin-top: -9%;
+}
+.mixr, .pick {
+  font-family: Quicksand;
+  color:#f90000;
+  text-shadow: 0 0 1px #ff1919, 0 0 2px #ff1919, 0 0 6px #ff1919, 0 0 12px #ff1919;
 }
 
 p {
@@ -98,7 +126,7 @@ p {
   width: 200px;
   height: 200px;
   background-image: url('../upicon.png');
-  border: 3px solid #0cd808;
+  border: 3px solid #f3f316;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-size: 65% 65%;
@@ -107,27 +135,28 @@ p {
   margin: 0 auto;
   margin-bottom: 5%;
   /*neon glow*/
-  box-shadow: 0 0 1px #b3ff51, 
-              0 0 2px #b3ff51, 
-              0 0 6px #b3ff51, 
-              0 0 12px #b3ff51, 
-              inset 0 0 1px #b3ff51, 
-              inset 0 0 2px #b3ff51, 
-              inset 0 0 6px #b3ff51, 
-              inset 0 0 12px #b3ff51;
+  box-shadow: 0 0 1px #ffffad, 
+              0 0 2px #ffffad, 
+              0 0 6px #ffffad, 
+              0 0 12px #ffffad, 
+              inset 0 0 1px #ffffad, 
+              inset 0 0 2px #ffffad, 
+              inset 0 0 6px #ffffad, 
+              inset 0 0 12px #ffffad;
 }
 
 .Rocks { 
   width: 200px;
   height: 200px;
-  background-image: url('../grayrocks.png');
+  background-image: url('../rocksicon.png');
   border: 3px solid #0cd808;
   border-radius: 50%;
   background-repeat: no-repeat;
-  background-size: 250% 300%;
+  background-size: 80% 80%;
   color: rgba(0,0,0,0);
   background-position: center;
   margin: 0 auto;
+  margin-bottom: 5%;
   box-shadow: 0 0 1px #b3ff51, 
               0 0 2px #b3ff51, 
               0 0 6px #b3ff51, 
@@ -141,7 +170,7 @@ p {
 .Savory { 
   width: 200px;
   height: 200px;
-  border: 3px solid #0cd808;
+  border: 3px solid #14a5ff;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-image: url('../savoryicon.png');
@@ -150,14 +179,14 @@ p {
   background-position: center;
   margin: 0 auto;
   margin-bottom: 5%;
-  box-shadow: 0 0 1px #b3ff51, 
-              0 0 2px #b3ff51, 
-              0 0 6px #b3ff51, 
-              0 0 12px #b3ff51, 
-              inset 0 0 1px #b3ff51, 
-              inset 0 0 2px #b3ff51, 
-              inset 0 0 6px #b3ff51, 
-              inset 0 0 12px #b3ff51;
+  box-shadow: 0 0 1px #22cef9, 
+              0 0 2px #22cef9, 
+              0 0 6px #22cef9, 
+              0 0 12px #22cef9, 
+              inset 0 0 1px #22cef9, 
+              inset 0 0 2px #22cef9, 
+              inset 0 0 6px #22cef9, 
+              inset 0 0 12px #22cef9;
  
 
 }
@@ -173,6 +202,7 @@ p {
   color: rgba(0,0,0,0);
   background-position: center;
   margin: 0 auto;
+  margin-bottom: 5%;
   box-shadow: 0 0 1px #ff70c6, 
               0 0 2px #ff70c6, 
               0 0 6px #ff70c6, 
@@ -182,6 +212,21 @@ p {
               inset 0 0 6px #ff70c6, 
               inset 0 0 12px #ff70c6;
  
+}
+
+#question-container {
+  border: 3px solid #0cd808;
+  box-shadow: 0 0 1px #b3ff51, 
+              0 0 2px #b3ff51, 
+              0 0 6px #b3ff51, 
+              0 0 12px #b3ff51, 
+              inset 0 0 1px #b3ff51, 
+              inset 0 0 2px #b3ff51, 
+              inset 0 0 6px #b3ff51, 
+              inset 0 0 12px #b3ff51;
+  border-radius: 10px;
+  height: 90%;
+  margin-top: 5%;
 }
 
 

@@ -68,8 +68,10 @@ function activate(question) {
             key = userChoices.join();
            console.log(finaldrink[key]);
            $(".title").fadeOut();
-           $("#question").fadeOut();
-           $(finaldrink[key]).fadeIn();
+           $("#question").fadeOut(function(){
+            $(finaldrink[key]).fadeIn();
+           });
+      
             
         //otherwise, show & set up the next Question
         }else{
