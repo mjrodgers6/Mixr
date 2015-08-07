@@ -95,7 +95,12 @@ h1 {
   /*border: 3px solid white;*/
 }
 
-
+img {
+  float: right;
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+}
 .mixr, .pick {
   font-family: Quicksand;
   color:#f90000;
