@@ -6,8 +6,8 @@ $(document).ready(function  () {
 finaldrink = {
     "Up,Sweet": ".first-choice",
     "Up,Savory": ".second-choice",
-    "Rocks,Sweet": ".third-choice",
-    "Rocks,Savory": ".fourth-choice"
+    "On The Rocks,Sweet": ".third-choice",
+    "On The Rocks,Savory": ".fourth-choice"
 }
 userChoices = []
 
@@ -23,16 +23,25 @@ q2 = {"choices": [
 q1 = { "choices": 
             [
              {"answer": "Up", "nextQuestion": q2},
-             {"answer": "Rocks", "nextQuestion": q2}
+             {"answer": "On The Rocks", "nextQuestion": q2}
             ]
      };
 
+function formatForClass(text){
+  return text.replace(/\s/g, "-");
+}
 //map over each choice for a question and construct an li
 //then add those li's to the question container ul
 function renderQuestion(question){
-    options = _(question["choices"]).map(function(choice){
+    len = question["choices"].length;
+    options = _(question["choices"]).map(function(choice, i){
       var option = choice["answer"];
-      return "<div class='" + option + "'>" + option + "</div>";
+      var optionClass = formatForClass(option);
+      var returnText = "<div class='" + optionClass + "'>" + option + "</div>"
+      if (i != len - 1) {
+        returnText = returnText + "<p class='or'>OR</p>"
+      }
+      return returnText;
     });
     $('#question').html(options.join(''));
 }
@@ -49,7 +58,7 @@ function activate(question) {
       //since we're adding the answer text as classes on
       //their associated li's, make a class selector based
       //on that asnwer text (just prefix with dot)
-      var selector = "." + answer;
+      var selector = formatForClass("." + answer);
         
       //set up a click listener for each answer li
       $('#question').on('click', selector, function(){
