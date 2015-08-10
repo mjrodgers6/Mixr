@@ -9,6 +9,13 @@ finaldrink = {
     "On The Rocks,Sweet": ".third-choice",
     "On The Rocks,Savory": ".fourth-choice"
 }
+
+animation = {
+    "Up,Sweet": "#up-drink",
+    "Up,Savory": "#up-drink",
+    "On The Rocks,Sweet": "#rocks-drink",
+    "On The Rocks,Savory": "#rocks-drink"
+}
 userChoices = []
 
 //start with the bottom of the tree. 
@@ -76,12 +83,23 @@ function activate(question) {
 
             key = userChoices.join();
            console.log(finaldrink[key]);
+
+
            $(".title").fadeOut();
-           $("#question").fadeOut(function(){
-            $(finaldrink[key]).fadeIn();
-           });
+           $("#question-container").toggle("slide", { direction: "left"}, 500, function(){
+              $(finaldrink[key]).toggle("slide", { direction: "right" }, 500);
+              });
       
-            
+          // $("#question-container").toggle("slide", { direction: "left"}, 1000, function(){
+          //   $(animation[key]).toggle("slide", { direction: "right"}, 1000, function(){
+          //     setTimeout(function() {
+          //       $(animation[key]).toggle("slide", { direction: "left"}, 1000);} 2500, function(){
+          //         $(finaldrink[key]).toggle("slide", { direction: "right" }, 1000);
+          //       });  
+          //     });
+          //   });
+
+
         //otherwise, show & set up the next Question
         }else{
             renderQuestion(nextQ);
